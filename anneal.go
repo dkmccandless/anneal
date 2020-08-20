@@ -72,7 +72,7 @@ func Anneal(s State, sch *Schedule) State {
 		snew := s.Neighbor()
 		enew := snew.Energy()
 		if enew < e {
-			if ebest < enew {
+			if enew < ebest {
 				sbest, ebest = snew, enew
 			}
 		} else {
